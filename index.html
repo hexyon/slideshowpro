@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Slideshow</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <input type="file" id="upload" multiple accept="image/*" onchange="handleFiles(this.files)">
+    <button id="start">Start Slideshow</button>
+    <button id="stop">Stop Slideshow</button>
+    <button id="random">Randomize Slideshow</button>
+    <button id="fullscreen">Full Screen</button>
+    <input type="number" id="delay" min="1" max="60" value="5"> Seconds Delay
+    <div id="status">Active: </div>
+    <div id="fullscreen-container">
+        <div id="slideshow" class="slideshow"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
