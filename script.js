@@ -31,7 +31,7 @@ document.getElementById('random').addEventListener('click', function() {
 });
 
 document.getElementById('fullscreen').addEventListener('click', function() {
-    document.getElementById('status').innerText = 'On: Full Screen';
+    document.getElementById('status').innerText = 'On: ';
     document.getElementById('fullscreen-container').requestFullscreen();
 });
 
