@@ -66,3 +66,46 @@ button:active {
     border-radius: 2px;
 }
 
+#upload-button {
+    font-size: 20px;
+    color: white;
+    background-color: #333333; /* Change this line to match the color of the other buttons */
+    border: none;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 40px; /* Add this line to center the "+" vertically */
+    text-align: center; /* Add this line to center the "+" horizontally */
+}
+
+#upload-button:hover {
+    background-color: #212121; /* Darker gray color on hover */
+}
+
+#upload-button:active {
+    background-color: #000000; /* Even darker gray color when button is clicked */
+}
+
+#delay {
+    -webkit-appearance: none; /* This line removes the default dropdown arrow in Webkit browsers */
+    -moz-appearance: none; /* This line removes the default dropdown arrow in Firefox */
+    appearance: none; /* This line removes the default dropdown arrow in other browsers */
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#delay::-ms-expand {
+    display: none; /* This line removes the default dropdown arrow in IE */
+}
+
+/* Add these lines to remove the default styling on focus */
+#delay:focus {
+    outline: none;
+    box-shadow: none;
+}
+
