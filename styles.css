@@ -109,3 +109,13 @@ button:active {
     box-shadow: none;
 }
 
+@font-face {
+    font-family: 'SF UI Display Bold';
+    src: url('sf-ui-display-bold-58646a511e3d9.otf') format('opentype');
+}
+
+body {
+    font-family: 'SF UI Display Bold', sans-serif;
+    font-size: 16px; /* Adjust this value to change the font size */
+}
+
