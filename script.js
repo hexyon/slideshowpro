@@ -3,7 +3,6 @@ let currentIndex = 0;
 let slideshowInterval;
 let random = false;
 let loop = false;
-let isSlideshowRunning = false;
 
 function handleFiles(files) {
     for (let i = 0; i < files.length; i++) {
@@ -33,10 +32,7 @@ document.getElementById('random').addEventListener('click', function() {
 
 document.getElementById('fullscreen').addEventListener('click', function() {
     document.getElementById('status').innerText = 'On: ';
-    document.getElementById('fullscreen-container').requestFullscreen().then(function() {
-        startSlideshow();
-        isSlideshowRunning = true;
-    });
+    document.getElementById('fullscreen-container').requestFullscreen();
 });
 
 document.getElementById('loop').addEventListener('click', function() {
@@ -177,20 +173,3 @@ document.getElementById('fullscreen-container').addEventListener('fullscreenchan
     }
 });
 
-document.addEventListener('keydown', function(event) {
-    if (event.code == 'Space') {
-        if (document.fullscreenElement) {
-            if (isSlideshowRunning) {
-                stopSlideshow();
-                isSlideshowRunning = false;
-            } else {
-                startSlideshow();
-                isSlideshowRunning = true;
-            }
-        }
-    } else if (event.code == 'ArrowLeft') {
-        previousImage();
-    } else if (event.code == 'ArrowRight') {
-        nextImage();
-    }
-});
