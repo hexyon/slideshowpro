@@ -119,7 +119,7 @@ body {
     font-size: 36px;
     color: #333333;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 42px); /* Adjust this line */
     padding: 16px;
     cursor: pointer;
     user-select: none;
