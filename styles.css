@@ -22,9 +22,9 @@ body {
 }
 
 button {
-    background-color: #333333; /* Gray color */
+    background-color: #161617; /* Dark gray */
+    color: #C9C9CD; /* Light gray */
     border: none;
-    color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -69,8 +69,8 @@ button:active {
 
 #upload-button {
     font-size: 20px;
-    color: white;
-    background-color: #333333; /* Change this line to match the color of the other buttons */
+    color: #C9C9CD; /* Light gray */
+    background-color: #161617; /* Dark gray */
     border: none;
     padding: 10px 24px;
     border-radius: 12px;
@@ -93,8 +93,8 @@ button:active {
     appearance: none; /* This line removes the default dropdown arrow in other browsers */
     padding: 10px;
     border-radius: 12px;
-    background-color: #333333;
-    color: white;
+    background-color: #161617; /* Dark gray */
+    color: #C9C9CD; /* Light gray */
     border: none;
     font-size: 16px;
     cursor: pointer;
