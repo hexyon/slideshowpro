@@ -8,11 +8,11 @@
 <body>
     <input type="file" id="upload" multiple accept="image/*" onchange="handleFiles(this.files)" style="display: none;">
     <button id="upload-button" onclick="document.getElementById('upload').click()">+</button>
-    <button id="start">Start Slideshow</button>
-    <button id="stop">Stop Slideshow</button>
-    <button id="random">Randomize Slideshow</button>
+    <button id="start" data-start="off">Start Slideshow</button>
+    <button id="stop" data-stop="off">Stop Slideshow</button>
+    <button id="random" data-random="off">Randomize</button>
     <button id="fullscreen">Full Screen</button>
-    <button id="loop">Loop</button>
+    <button id="loop" data-loop="off">Loop</button>
     <select id="delay">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -45,8 +45,6 @@
     <option value="29">29</option>
     <option value="30">30</option>
     </select> 
-    <div id="status">On: </div>
-    <div id="loopstatus">Loop: Off</div>
     <div id="fullscreen-container">
     <div id="arrow-left" class="arrow">❮</div>
     <div id="arrow-right" class="arrow">❯</div>
