@@ -184,3 +184,14 @@ document.getElementById('fullscreen-container').addEventListener('fullscreenchan
     }
 });
 
+document.querySelectorAll('button').forEach(function(button) {
+    button.addEventListener('touchstart', function() {
+        this.classList.add('touched');
+    });
+
+    button.addEventListener('touchend', function() {
+        this.classList.remove('touched');
+    });
+});
+
+
