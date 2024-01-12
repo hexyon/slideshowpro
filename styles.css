@@ -23,7 +23,7 @@ body {
 
 /* Add styles for the 'on' state of the buttons */
 button[data-start="on"], button[data-stop="on"], button[data-loop="on"], button[data-random="on"] {
-    background-color: #1DB954; /* Green */
+    background-color: #333333; /* Premium Gray */
     color: white;
 }
 
