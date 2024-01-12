@@ -66,7 +66,14 @@ function startSlideshow() {
 
 function stopSlideshow() {
     clearInterval(slideshowInterval);
+    slideshowInterval = null; // Add this line
 }
+
+document.getElementById('delay').addEventListener('change', function() {
+    if (slideshowInterval) {
+        startSlideshow();
+    }
+});
 
 function shuffleImages() {
     for (let i = images.length - 1; i > 0; i--) {
