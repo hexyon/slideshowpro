@@ -44,6 +44,9 @@ document.getElementById('loop').addEventListener('click', function() {
 });
 
 function startSlideshow() {
+    if (images.length === 0) {
+        return; // Don't start the slideshow if there are no images
+    }
     stopSlideshow();
     slideshowInterval = setInterval(function() {
         if (currentIndex >= images.length) {
@@ -63,6 +66,7 @@ function startSlideshow() {
         updateProgressBar();
     }, document.getElementById('delay').value * 1000);
 }
+
 
 function stopSlideshow() {
     clearInterval(slideshowInterval);
