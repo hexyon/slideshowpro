@@ -21,6 +21,18 @@ body {
     max-height: 100%;
 }
 
+/* Add styles for the 'on' state of the buttons */
+button[data-start="on"], button[data-stop="on"], button[data-loop="on"], button[data-random="on"] {
+    background-color: #1DB954; /* Green */
+    color: white;
+}
+
+/* Add styles for the 'off' state of the buttons */
+button[data-start="off"], button[data-stop="off"], button[data-loop="off"], button[data-random="off"] {
+    background-color: #181818; /* Black */
+    color: #B3B3B3; /* Gray */
+}
+
 button {
     background-color: #161617; /* Dark gray */
     color: #C9C9CD; /* Light gray */
