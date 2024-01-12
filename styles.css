@@ -157,3 +157,8 @@ body {
     opacity: 1;
 }
 
+button.touched {
+    background-color: #333333; /* Premium Gray */
+    color: white;
+}
+
