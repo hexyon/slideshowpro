@@ -13,34 +13,32 @@ function handleFiles(files) {
 }
 
 document.getElementById('start').addEventListener('click', function() {
-    document.getElementById('status').innerText = 'On: Start Slideshow';
+    this.dataset.start = 'on';
+    document.getElementById('stop').dataset.stop = 'off';
     startSlideshow();
 });
 
 document.getElementById('stop').addEventListener('click', function() {
-    document.getElementById('status').innerText = 'On: Stop Slideshow';
+    this.dataset.stop = 'on';
+    document.getElementById('start').dataset.start = 'off';
     stopSlideshow();
 });
 
 document.getElementById('random').addEventListener('click', function() {
-    document.getElementById('status').innerText = 'On: Randomize Slideshow';
     random = !random;
+    this.dataset.random = random ? 'on' : 'off';
     if (random) {
         shuffleImages();
     }
 });
 
 document.getElementById('fullscreen').addEventListener('click', function() {
-    document.getElementById('status').innerText = 'On: ';
     document.getElementById('fullscreen-container').requestFullscreen();
 });
 
 document.getElementById('loop').addEventListener('click', function() {
     loop = !loop;
-    document.getElementById('loopstatus').innerText = loop ? 'Loop: On' : 'Loop: Off';
-    if (loop && !slideshowInterval) {
-        startSlideshow();
-    }
+    this.dataset.loop = loop ? 'on' : 'off';
 });
 
 function startSlideshow() {
@@ -48,6 +46,7 @@ function startSlideshow() {
         return; // Don't start the slideshow if there are no images
     }
     stopSlideshow();
+    document.getElementById('start').dataset.start = 'on'; // Set the start button to 'on' when the slideshow starts
     slideshowInterval = setInterval(function() {
         if (currentIndex >= images.length) {
             if (loop) {
@@ -95,6 +94,7 @@ function updateProgressBar() {
 function fadeOutSlideshow() {
     document.getElementById('slideshow').style.transition = "opacity 1s ease-in-out";
     document.getElementById('slideshow').style.opacity = 0;
+    document.getElementById('start').dataset.start = 'off'; // Set the start button to 'off' when the slideshow ends
 }
 
 // Add event listeners for arrow keys
