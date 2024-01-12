@@ -57,6 +57,7 @@ button:active {
     height: 4px;
     background-color: #212121; 
     border-radius: 2px;
+    border: 1px solid #000000; /* Add a black border */
 }
 
 #progress-bar {
