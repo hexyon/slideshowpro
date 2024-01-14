@@ -23,19 +23,19 @@ body {
 
 /* Add styles for the 'on' state of the buttons */
 button[data-start="on"], button[data-stop="on"], button[data-loop="on"], button[data-random="on"] {
-    background-color: #333333; /* Premium Gray */
+    background-color: #333333; 
     color: white;
 }
 
 /* Add styles for the 'off' state of the buttons */
 button[data-start="off"], button[data-stop="off"], button[data-loop="off"], button[data-random="off"] {
-    background-color: #181818; /* Black */
-    color: #B3B3B3; /* Gray */
+    background-color: #181818; 
+    color: #B3B3B3; 
 }
 
 button {
-    background-color: #161617; /* Dark gray */
-    color: #C9C9CD; /* Light gray */
+    background-color: #161617; 
+    color: #C9C9CD; 
     border: none;
     text-align: center;
     text-decoration: none;
@@ -49,12 +49,12 @@ button {
 }
 
 button:hover {
-    background-color: #212121; /* Darker gray color on hover */
+    background-color: #212121; 
     color: white;
 }
 
 button:active {
-    background-color: #000000; /* Even darker gray color when button is clicked */
+    background-color: #000000; 
     color: white;
 }
 
@@ -69,7 +69,7 @@ button:active {
     height: 4px;
     background-color: #212121; 
     border-radius: 2px;
-    border: 1px solid #000000; /* Add a black border */
+    border: 1px solid #000000; 
 }
 
 #progress-bar {
@@ -82,8 +82,8 @@ button:active {
 
 #upload-button {
     font-size: 20px;
-    color: #C9C9CD; /* Light gray */
-    background-color: #161617; /* Dark gray */
+    color: #C9C9CD; 
+    background-color: #161617; 
     border: none;
     padding: 10px 24px;
     border-radius: 12px;
@@ -93,11 +93,11 @@ button:active {
 }
 
 #upload-button:hover {
-    background-color: #212121; /* Darker gray color on hover */
+    background-color: #212121; 
 }
 
 #upload-button:active {
-    background-color: #000000; /* Even darker gray color when button is clicked */
+    background-color: #000000; 
 }
 
 #delay {
@@ -106,8 +106,8 @@ button:active {
     appearance: none; /* This line removes the default dropdown arrow in other browsers */
     padding: 10px;
     border-radius: 12px;
-    background-color: #161617; /* Dark gray */
-    color: #C9C9CD; /* Light gray */
+    background-color: #161617; 
+    color: #C9C9CD; 
     border: none;
     font-size: 16px;
     cursor: pointer;
@@ -158,7 +158,7 @@ body {
 }
 
 button.touched {
-    background-color: #333333; /* Premium Gray */
+    background-color: #333333; 
     color: white;
 }
 
