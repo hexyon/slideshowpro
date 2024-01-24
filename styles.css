@@ -22,14 +22,14 @@ body {
 }
 
 /* Add styles for the 'on' state of the buttons */
-button[data-start="on"], button[data-stop="on"], button[data-loop="on"], button[data-random="on"] {
-    background-color: #333333; 
+button[data-start="on"], button[data-stop="on"], button[data-loop="on"], button[data-random="on"], button[data-fullscreen="on"] {
+    background-color: #2f2f31; 
     color: white;
 }
 
 /* Add styles for the 'off' state of the buttons */
-button[data-start="off"], button[data-stop="off"], button[data-loop="off"], button[data-random="off"] {
-    background-color: #181818; 
+button[data-start="off"], button[data-stop="off"], button[data-loop="off"], button[data-random="off"], button[data-fullscreen="off"] {
+    background-color: #161617; 
     color: #B3B3B3; 
 }
 
