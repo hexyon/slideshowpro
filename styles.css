@@ -162,3 +162,8 @@ button.touched {
     color: white;
 }
 
+body {
+    background-image: url('background.jpg');
+    background-size: cover;  /* This will scale the background image to be as large as possible */
+    background-repeat: no-repeat;  /* This will prevent the background image from repeating */
+}
