@@ -21,13 +21,11 @@ body {
     max-height: 100%;
 }
 
-/* Add styles for the 'on' state of the buttons */
 button[data-start="on"], button[data-stop="on"], button[data-loop="on"], button[data-random="on"], button[data-fullscreen="on"] {
     background-color: #2f2f31; 
     color: white;
 }
 
-/* Add styles for the 'off' state of the buttons */
 button[data-start="off"], button[data-stop="off"], button[data-loop="off"], button[data-random="off"], button[data-fullscreen="off"] {
     background-color: #161617; 
     color: #B3B3B3; 
@@ -70,6 +68,7 @@ button:active {
     background-color: #212121; 
     border-radius: 2px;
     border: 1px solid #000000; 
+    display: none; /* Add this line */
 }
 
 #progress-bar {
@@ -78,7 +77,6 @@ button:active {
     background-color: #696969; 
     border-radius: 2px;
 }
-
 
 #upload-button {
     font-size: 20px;
@@ -118,7 +116,6 @@ button:active {
     display: none; /* This line removes the default dropdown arrow in IE */
 }
 
-/* Add these lines to remove the default styling on focus */
 #delay:focus {
     outline: none;
     box-shadow: none;
