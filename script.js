@@ -34,6 +34,7 @@ document.getElementById('random').addEventListener('click', function() {
 
 document.getElementById('fullscreen').addEventListener('click', function() {
     document.getElementById('fullscreen-container').requestFullscreen();
+    document.getElementById('progress-bar-container').style.display = 'block'; /* Add this line */
 });
 
 document.getElementById('loop').addEventListener('click', function() {
@@ -97,7 +98,6 @@ function fadeOutSlideshow() {
     document.getElementById('start').dataset.start = 'off'; // Set the start button to 'off' when the slideshow ends
 }
 
-// Add event listeners for arrow keys
 document.addEventListener('keydown', function(event) {
     if (event.code == 'ArrowLeft') {
         previousImage();
@@ -107,7 +107,6 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Function to show the previous image
 function previousImage() {
     if (currentIndex > 0) {
         currentIndex--;
@@ -117,7 +116,6 @@ function previousImage() {
     updateSlideshow();
 }
 
-// Function to show the next image
 function nextImage() {
     if (currentIndex < images.length - 1) {
         currentIndex++;
@@ -127,7 +125,6 @@ function nextImage() {
     updateSlideshow();
 }
 
-// Function to update the slideshow
 function updateSlideshow() {
     let img = document.createElement('img');
     img.src = images[currentIndex];
@@ -143,7 +140,6 @@ document.getElementById('arrow-left').addEventListener('click', function() {
 document.getElementById('arrow-right').addEventListener('click', function() {
     nextImage();
 });
-
 
 document.getElementById('arrow-left').addEventListener('mouseover', function() {
     if (document.fullscreenElement) {
@@ -181,6 +177,7 @@ document.getElementById('fullscreen-container').addEventListener('fullscreenchan
     if (!document.fullscreenElement) {
         document.getElementById('arrow-left').style.display = 'none';
         document.getElementById('arrow-right').style.display = 'none';
+        document.getElementById('progress-bar-container').style.display = 'none';
     }
 });
 
@@ -193,5 +190,3 @@ document.querySelectorAll('button').forEach(function(button) {
         this.classList.remove('touched');
     });
 });
-
-
