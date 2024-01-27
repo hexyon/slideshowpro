@@ -1,4 +1,5 @@
 let images = [];
+let imageElements = []; // New array to hold preloaded image elements
 let currentIndex = 0;
 let slideshowInterval;
 let random = false;
@@ -8,7 +9,13 @@ function handleFiles(files) {
     for (let i = 0; i < files.length; i++) {
         let file = files[i];
         if (!file.type.startsWith('image/')){ continue }
-        images.push(URL.createObjectURL(file));
+        let imageUrl = URL.createObjectURL(file);
+        images.push(imageUrl);
+
+        // Preload the image
+        let img = new Image();
+        img.src = imageUrl;
+        imageElements.push(img); // Store the preloaded image element
     }
 }
 
@@ -126,8 +133,7 @@ function nextImage() {
 }
 
 function updateSlideshow() {
-    let img = document.createElement('img');
-    img.src = images[currentIndex];
+    let img = imageElements[currentIndex]; // Use the preloaded image element
     document.getElementById('slideshow').innerHTML = '';
     document.getElementById('slideshow').appendChild(img);
     updateProgressBar();
