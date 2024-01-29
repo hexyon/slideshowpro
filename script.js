@@ -36,6 +36,7 @@ document.getElementById('random').addEventListener('click', function() {
     this.dataset.random = random ? 'on' : 'off';
     if (random) {
         shuffleImages();
+        preloadImages(); // Preload the shuffled images
     }
 });
 
@@ -130,6 +131,15 @@ function nextImage() {
         currentIndex = 0; // Loop back to the first image
     }
     updateSlideshow();
+}
+
+function preloadImages() {
+    imageElements = []; // Clear the preloaded images array
+    for (let i = 0; i < images.length; i++) {
+        let img = new Image();
+        img.src = images[i];
+        imageElements.push(img); // Store the preloaded image element
+    }
 }
 
 function updateSlideshow() {
