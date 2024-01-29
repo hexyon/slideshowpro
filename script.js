@@ -206,3 +206,19 @@ document.querySelectorAll('button').forEach(function(button) {
         this.classList.remove('touched');
     });
 });
+
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') {
+        if (slideshowInterval) {
+            stopSlideshow();
+            document.getElementById('stop').dataset.stop = 'on';
+            document.getElementById('start').dataset.start = 'off';
+        } else {
+            startSlideshow();
+            document.getElementById('start').dataset.start = 'on';
+            document.getElementById('stop').dataset.stop = 'off';
+        }
+    }
+});
+
+
